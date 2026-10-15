@@ -1,5 +1,4 @@
 #body2 {
-  background: linear-gradient(to right, #daf8ff, #c4c3ff);
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -11,6 +10,7 @@
 
 /* Centers the toggle button nicely on the page */
 .toggle-container {
+  background: linear-gradient(to right, #daf8ff, #c4c3ff);
   margin-top: 20px;
   position: relative;
   display: flex;
