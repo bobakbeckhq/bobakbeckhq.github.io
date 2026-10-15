@@ -5,12 +5,18 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  background: linear-gradient(to right, #daf8ff, #c4c3ff);
+  color: #263044;
   transition: 0.4s;
+}
+
+#body2:has(.input:checked) {
+  background: #000;
+  color: #fff;
 }
 
 /* Centers the toggle button nicely on the page */
 .toggle-container {
-  background: linear-gradient(to right, #daf8ff, #c4c3ff);
   margin-top: 20px;
   position: relative;
   display: flex;
