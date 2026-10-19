@@ -1,0 +1,378 @@
+/* --- Global Body & Background Upgrade --- */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+    color: #1e293b;
+    margin: 0;
+    padding: 40px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- Heading Styling (Weather Dashboard) --- */
+
+h1 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 24px;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+/* --- Search Form Container --- */
+
+.search-form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* --- Input Field Styling --- */
+
+.city-input {
+    flex: 1;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 2px solid #cbd5e1;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background: #ffffff;
+}
+
+.city-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* --- Modern Search Button Styling --- */
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    background: #3b82f6;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+}
+
+button:hover {
+    background: #2563eb;
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.35);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* --- Night Time Theme --- */
+
+.weather-display.night {
+    background: linear-gradient(135deg, #0f172a, #1e1b4b);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.4);
+}
+
+
+/* --- Upgraded Weather Display Card --- */
+
+.weather-display {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 30px;
+    
+    /* UI Polish: A vibrant blue gradient background */
+    
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    color: white;
+    border-radius: 16px;
+    
+    /* UI Polish: A deeper, softer shadow for depth */
+    
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+    text-align: center;
+    
+    /* UX Polish: Smooth transition for hover effects */
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* UX Polish: Subtle lift effect when the user hovers over the weather card */
+
+.weather-display:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(59, 130, 246, 0.4);
+}
+
+/* --- Weather Card Inner Elements --- */
+
+.weather-display h2 {
+    margin: 0 0 10px 0;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.weather-display .temp {
+    
+    /* UI Hierarchy: Make the temperature massive so it catches the eye first */
+    
+    font-size: 52px;
+    font-weight: bold;
+    margin: 15px 0;
+    letter-spacing: -1px;
+}
+
+.weather-display .desc {
+    font-size: 18px;
+    text-transform: capitalize;
+    opacity: 0.9;
+    margin-bottom: 10px;
+}
+
+.weather-display .wind {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* --- Weather Icon Styling --- */
+
+.weather-display .weather-icon {
+    width: 90px;
+    height: 90px;
+    margin: -5px auto 0 auto;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+
+/* --- Recent Searches Section --- */
+.recent-searches {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.recent-searches p {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+/* Container holding the buttons */
+#recentSearches > div {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Individual Recent Search Button Styling */
+
+.recent-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    background: #ffffff;
+    color: #334155;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+/* Hover effect to match your modern UI theme */
+
+.recent-btn:hover {
+    background: #f1f5f9;
+    border-color: #94a3b8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.recent-btn:active {
+    transform: translateY(0);
+}
+
+
+/* --- Weather Card Theme Variants --- */
+
+/* Sunny / Clear Weather */
+
+.weather-display.sunny {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+}
+
+/* Rainy / Stormy Weather */
+
+.weather-display.rainy {
+    background: linear-gradient(135deg, #475569, #1e293b);
+    box-shadow: 0 10px 25px rgba(71, 85, 105, 0.3);
+}
+
+/* Cold / Snowy Weather */
+
+.weather-display.cold {
+    background: linear-gradient(135deg, #0ea5e9, #0284c7);
+    box-shadow: 0 10px 25px rgba(14, 165, 233, 0.3);
+}
+
+/* Cloudy / Default Weather */
+
+.weather-display.cloudy {
+    background: linear-gradient(135deg, #64748b, #475569);
+    box-shadow: 0 10px 25px rgba(100, 116, 139, 0.3);
+}
+
+
+
+
+
+
+/* --- Responsive Media Query for Mobile Devices --- */
+
+@media (max-width: 600px) {
+    
+    /* 1. Make the body padding tighter for small screens */
+    
+    body {
+        padding: 10px;
+    }
+
+    /* 2. Let the header and dashboard titles scale down slightly */
+    
+    .header-weather {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .weather-1 {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+
+    /* 3. Make the search form stack or fit 100% width on phones */
+    
+    .search-form {
+        flex-direction: column; /* Stacks the input and button vertically */
+        align-items: center;
+        gap: 8px;
+    }
+
+    .city-input {
+        width: 100%; /* Takes up full width of the mobile screen */
+        max-width: 300px;
+    }
+
+    button {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* 4. Adjust the weather card to fit smaller margins */
+    
+    .weather-display {
+        max-width: 100%;
+        margin: 20px 10px;
+        padding: 20px;
+    }
+
+    .weather-display .temp {
+        font-size: 42px; /* Slightly smaller temperature text for mobile */
+    }
+}
+
+
+
+
+
+
+/* --- Loading Spinner Styles --- */
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #ffffff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* --- Header Layout --- */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+}
+
+/* --- Theme Toggle Button --- */
+.theme-toggle-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+    background: #e2e8f0;
+    color: #1e293b;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: none;
+    transition: all 0.3s ease;
+}
+
+/* --- Global Dark Mode Styles --- */
+
+body.dark-mode {
+    background: linear-gradient(135deg, #0f172a, #020617);
+    color: #f8fafc;
+}
+
+body.dark-mode h1,
+body.dark-mode .forecast-section h3 {
+    color: #f8fafc;
+}
+
+body.dark-mode .city-input {
+    background: #1e293b;
+    color: #ffffff;
+    border-color: #334155;
+}
+
+body.dark-mode .city-input::placeholder {
+    color: #94a3b8;
+}
+
+body.dark-mode .theme-toggle-btn {
+    background: #334155;
+    color: #f8fafc;
+}
+
+body.dark-mode .forecast-card {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+body.dark-mode .forecast-day,
+body.dark-mode .forecast-temp {
+    color: #f8fafc;
+}
