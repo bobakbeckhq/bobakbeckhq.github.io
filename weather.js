@@ -3,7 +3,7 @@ const cityInput = document.querySelector('.city-input');
 const weatherDisplay = document.querySelector('.weather-display');
 
 // Your OpenWeatherMap API key
-const apiKey = "105b4adb1a2a305bbdf5dd2f4aa26ae8";
+const apiKey = "<YOUR_API_KEY>";
 
 searchForm.addEventListener('submit', async function(event) {
     event.preventDefault();
